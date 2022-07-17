@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS6_HW17_AndreyMatveev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7di-l4-KRo">
+                                <rect key="frame" x="20" y="771" width="374" height="30"/>
+                                <color key="tintColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Change color">
+                                    <color key="titleColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBut:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="C92-20-hoa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P44-zX-YKa">
+                                <rect key="frame" x="20" y="330" width="97" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create password">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <color key="strokeColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="createPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t9C-el-J3h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1da-bc-lE0">
+                                <rect key="frame" x="142" y="195" width="130" height="87"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOZ-5d-7zy">
+                                <rect key="frame" x="122" y="332" width="272" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jCA-sL-zpm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P44-zX-YKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4r2-sC-7cB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7di-l4-KRo" secondAttribute="trailing" constant="20" id="75c-wa-qCB"/>
+                            <constraint firstItem="P44-zX-YKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8g7-vg-v7w"/>
+                            <constraint firstItem="1da-bc-lE0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="151" id="AmH-dP-sAF"/>
+                            <constraint firstItem="7di-l4-KRo" firstAttribute="top" secondItem="P44-zX-YKa" secondAttribute="bottom" constant="393" id="B1d-ux-8W3"/>
+                            <constraint firstItem="P44-zX-YKa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="286" id="HSW-8R-cXq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1da-bc-lE0" secondAttribute="trailing" constant="142" id="JFU-bw-C6Y"/>
+                            <constraint firstItem="1da-bc-lE0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="Jcz-vr-Pw4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fOZ-5d-7zy" secondAttribute="trailing" constant="20" id="NHz-zg-GDa"/>
+                            <constraint firstItem="7di-l4-KRo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TYg-e0-2nQ"/>
+                            <constraint firstItem="fOZ-5d-7zy" firstAttribute="leading" secondItem="P44-zX-YKa" secondAttribute="trailing" constant="5" id="Yra-me-X2Z"/>
+                            <constraint firstItem="7di-l4-KRo" firstAttribute="top" secondItem="fOZ-5d-7zy" secondAttribute="bottom" constant="394" id="ZP6-c7-nCZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fOZ-5d-7zy" secondAttribute="trailing" constant="20" id="n0a-2z-wSJ"/>
+                            <constraint firstItem="P44-zX-YKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pBO-sp-A5W"/>
+                            <constraint firstItem="fOZ-5d-7zy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="qLo-dB-vsz"/>
+                            <constraint firstItem="fOZ-5d-7zy" firstAttribute="top" secondItem="1da-bc-lE0" secondAttribute="bottom" constant="50" id="qf8-To-foA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="7di-l4-KRo" id="m8A-On-rrZ"/>
+                        <outlet property="chosenPasswordLabel" destination="1da-bc-lE0" id="wSO-HE-zXY"/>
+                        <outlet property="createPasswordButton" destination="P44-zX-YKa" id="IGi-BT-Wzn"/>
+                        <outlet property="passwordTextField" destination="fOZ-5d-7zy" id="wcY-Ka-bbS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
