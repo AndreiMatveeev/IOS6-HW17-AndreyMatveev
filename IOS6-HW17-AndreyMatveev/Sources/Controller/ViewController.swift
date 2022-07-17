@@ -9,12 +9,34 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var chosenPasswordLabel: UILabel!
     @IBOutlet weak var createPasswordButton: UIButton!
     @IBOutlet weak var crackPasswordButton: UIButton!
+    
+    // MARK: - Actions
+    
+    @IBAction func createPassword(_ sender: Any) {
+        password = generatePassword()
+        passwordTextField.text = password
+        self.passwordTextField.isSecureTextEntry = true
+    }
+    
+    @IBAction func crakPassword(_ sender: Any) {
+        queue.async {
+            self.bruteForce(passwordToUnlock: self.password)
+        }
+    }
+    
+    @IBAction func onBut(_ sender: Any) {
+        isBlack.toggle()
+    }
+    
+    // MARK: - Properties
     
     var isBlack: Bool = false {
         didSet {
@@ -31,22 +53,7 @@ class ViewController: UIViewController {
     var isWorking = false
     let queue = DispatchQueue(label: "brute", qos: .utility)
     
-    @IBAction func createPassword(_ sender: Any) {
-        password = generatePassword()
-        passwordTextField.text = password
-        self.passwordTextField.isSecureTextEntry = true
-        
-    }
-    
-    @IBAction func crakPassword(_ sender: Any) {
-        queue.async {
-            self.bruteForce(passwordToUnlock: self.password)
-        }
-    }
-    
-    @IBAction func onBut(_ sender: Any) {
-        isBlack.toggle()
-    }
+    // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,19 +64,21 @@ class ViewController: UIViewController {
         activityIndicator.isHidden = true
     }
     
+    // MARK: - Functions
+    
     func bruteForce(passwordToUnlock: String) {
         
         var password: String = ""
         isWorking = true
         
-        let findPasswordWorkItem = DispatchWorkItem {
+        let findPassword = DispatchWorkItem {
             self.chosenPasswordLabel.text = "Select a password: " + "\(password)"
             self.passwordTextField.isSecureTextEntry = true
             self.activityIndicator.isHidden = false
             self.activityIndicator.startAnimating()
         }
         
-        let resultPasswordWorkItem = DispatchWorkItem {
+        let resultPassword = DispatchWorkItem {
             self.chosenPasswordLabel.text = "Your password: " + "\(password)"
             self.passwordTextField.isSecureTextEntry = false
             self.activityIndicator.isHidden = true
@@ -79,7 +88,7 @@ class ViewController: UIViewController {
         while password != passwordToUnlock {
             password = generateBruteForce(password, fromArray: allowedCharacters)
             if isWorking {
-                DispatchQueue.main.async(execute: findPasswordWorkItem)
+                DispatchQueue.main.async(execute: findPassword)
             } else {
                 break
             }
@@ -87,7 +96,7 @@ class ViewController: UIViewController {
         }
         
         if isWorking {
-            DispatchQueue.main.async(execute: resultPasswordWorkItem)
+            DispatchQueue.main.async(execute: resultPassword)
         }
     }
     
@@ -98,21 +107,6 @@ class ViewController: UIViewController {
             password += character
         }
         return password
-    }
-}
-
-extension String {
-    var digits:      String { return "0123456789" }
-    var lowercase:   String { return "abcdefghijklmnopqrstuvwxyz" }
-    var uppercase:   String { return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" }
-    var punctuation: String { return "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" }
-    var letters:     String { return lowercase + uppercase }
-    var printable:   String { return digits + letters + punctuation }
-    
-    mutating func replace(at index: Int, with character: Character) {
-        var stringArray = Array(self)
-        stringArray[index] = character
-        self = String(stringArray)
     }
 }
 
@@ -141,5 +135,21 @@ func generateBruteForce(_ string: String, fromArray array: [String]) -> String {
     }
     return str
 }
+
+extension String {
+    var digits:      String { return "0123456789" }
+    var lowercase:   String { return "abcdefghijklmnopqrstuvwxyz" }
+    var uppercase:   String { return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" }
+    var punctuation: String { return "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" }
+    var letters:     String { return lowercase + uppercase }
+    var printable:   String { return digits + letters + punctuation }
+    
+    mutating func replace(at index: Int, with character: Character) {
+        var stringArray = Array(self)
+        stringArray[index] = character
+        self = String(stringArray)
+    }
+}
+
 
 
