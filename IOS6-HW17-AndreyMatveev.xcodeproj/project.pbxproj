@@ -56,15 +56,55 @@
 		B20FBC45287C76AA002BFBD0 /* IOS6-HW17-AndreyMatveev */ = {
 			isa = PBXGroup;
 			children = (
-				B20FBC46287C76AA002BFBD0 /* AppDelegate.swift */,
-				B20FBC48287C76AA002BFBD0 /* SceneDelegate.swift */,
-				B20FBC4A287C76AA002BFBD0 /* ViewController.swift */,
-				B20FBC4C287C76AA002BFBD0 /* Main.storyboard */,
-				B20FBC4F287C76B1002BFBD0 /* Assets.xcassets */,
-				B20FBC51287C76B1002BFBD0 /* LaunchScreen.storyboard */,
-				B20FBC54287C76B1002BFBD0 /* Info.plist */,
+				B2674E362883CE0300C87B86 /* Sources */,
+				B2674E372883CE3300C87B86 /* Resources */,
 			);
 			path = "IOS6-HW17-AndreyMatveev";
+			sourceTree = "<group>";
+		};
+		B2674E332883CD5C00C87B86 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B20FBC48287C76AA002BFBD0 /* SceneDelegate.swift */,
+				B20FBC46287C76AA002BFBD0 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B2674E342883CD8F00C87B86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B20FBC4A287C76AA002BFBD0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B2674E352883CDA100C87B86 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B20FBC51287C76B1002BFBD0 /* LaunchScreen.storyboard */,
+				B20FBC4C287C76AA002BFBD0 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B2674E362883CE0300C87B86 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B2674E342883CD8F00C87B86 /* Controller */,
+				B2674E332883CD5C00C87B86 /* Application */,
+				B2674E352883CDA100C87B86 /* Storyboard */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B2674E372883CE3300C87B86 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B20FBC54287C76B1002BFBD0 /* Info.plist */,
+				B20FBC4F287C76B1002BFBD0 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K2A4TFL764;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "IOS6-HW17-AndreyMatveev/Info.plist";
+				INFOPLIST_FILE = "IOS6-HW17-AndreyMatveev/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K2A4TFL764;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "IOS6-HW17-AndreyMatveev/Info.plist";
+				INFOPLIST_FILE = "IOS6-HW17-AndreyMatveev/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -8,7 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var chosenPasswordLabel: UILabel!
+    @IBOutlet weak var createPasswordButton: UIButton!
     
     var isBlack: Bool = false {
         didSet {
@@ -19,10 +23,14 @@ class ViewController: UIViewController {
             }
         }
     }
+
+    @IBAction func createPassword(_ sender: Any) {
+    }
     
     @IBAction func onBut(_ sender: Any) {
         isBlack.toggle()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +57,6 @@ class ViewController: UIViewController {
         print(password)
     }
 }
-
-
 
 extension String {
     var digits:      String { return "0123456789" }
