@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS6_HW17_AndreyMatveev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="348" translatesAutoresizingMaskIntoConstraints="NO" id="Yqm-PH-7Cg">
+                                <rect key="frame" x="83.5" y="196" width="247" height="504"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZuL-xm-QGd">
+                                        <rect key="frame" x="0.0" y="0.0" width="247" height="125"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="BZ5-FR-OSd">
+                                                <rect key="frame" x="0.0" y="0.0" width="247" height="20"/>
+                                                <subviews>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="vAw-Yf-qHb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                    </activityIndicatorView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1da-bc-lE0">
+                                                        <rect key="frame" x="42" y="0.0" width="205" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="QVB-0b-zqR">
+                                                <rect key="frame" x="0.0" y="35" width="247" height="90"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOZ-5d-7zy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="247" height="39.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="TuY-f0-duR">
+                                                        <rect key="frame" x="0.0" y="65.5" width="247" height="24.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P44-zX-YKa">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93" height="24.5"/>
+                                                                <buttonConfiguration key="configuration" style="gray" subtitle="">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                                        <color key="strokeColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Create password">
+                                                                            <attributes>
+                                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                <font key="NSFont" size="9" name="Helvetica-Light"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="createPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t9C-el-J3h"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg3-8u-rvI">
+                                                                <rect key="frame" x="154" y="0.0" width="93" height="24.5"/>
+                                                                <buttonConfiguration key="configuration" style="gray" subtitle="">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                                        <color key="strokeColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="crack password">
+                                                                            <attributes>
+                                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                <font key="NSFont" size="9" name="Helvetica-Light"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="crakPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="044-vt-db8"/>
+                                                                    <action selector="createPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kda-Of-hYd"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7di-l4-KRo">
+                                        <rect key="frame" x="0.0" y="473" width="247" height="31"/>
+                                        <color key="tintColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Change color">
+                                            <color key="titleColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="gray" title="Change color">
+                                            <color key="baseForegroundColor" red="0.097892530259999999" green="0.098517768089999999" blue="0.1052474603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3QR-Ro-Y4b"/>
+                                            <action selector="onBut:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="C92-20-hoa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yqm-PH-7Cg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tqv-z1-Yd4"/>
+                            <constraint firstItem="Yqm-PH-7Cg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i1Q-pU-xFu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="vAw-Yf-qHb" id="5fs-Mj-gdg"/>
+                        <outlet property="button" destination="7di-l4-KRo" id="m8A-On-rrZ"/>
+                        <outlet property="chosenPasswordLabel" destination="1da-bc-lE0" id="wSO-HE-zXY"/>
+                        <outlet property="crackPasswordButton" destination="eg3-8u-rvI" id="bW1-aj-T4M"/>
+                        <outlet property="createPasswordButton" destination="P44-zX-YKa" id="IGi-BT-Wzn"/>
+                        <outlet property="passwordTextField" destination="fOZ-5d-7zy" id="wcY-Ka-bbS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
